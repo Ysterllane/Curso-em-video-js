@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body{
+            background-color: darkred;
+            color: #000;
+            font: normal 16px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Sistema de multas</h1>
+    <p id="result">Aqui vai o resultado</p>
+    <p class="body__p2">Aprendendo a usar o <strong>DOM</strong> em Jasvascript</p>
+    <p id="paragrafo">Teste</p>
+    <div name="msg">Clique em mim</div>
+    <br>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0];
+        var p2 = window.document.getElementsByClassName('body__p2')[0];
+        var corpo = window.document.body
+
+        window.document.write(`Está escrito assim: ${p1.innerText}! `);
+        window.document.getElementById('paragrafo').innerText = 'Estou aguardando...';
+
+        window.document.write(p2.innerHTML)
+        p1.style.color = 'darkBlue';
+        corpo.style.background = 'white'
+        window.document.getElementsByName('msg')[0].style.color = "green"
+        window.document.querySelector('p#result').style.background = "pink"
+        window.document.querySelector('.titulo').style.color = "darkcyan"
+    </script>
+</body>
+</html>
