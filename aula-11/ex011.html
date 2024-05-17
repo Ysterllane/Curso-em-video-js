@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{ 
+            background-color: aqua;
+            color: black;
+            font: normal 16px Comic Sans, cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        input{
+            width: 200px;
+            font: normal 15px Comic Sans, cursive;
+            padding: 2px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Qual país você mora?</h1>
+        <input type="text" name="txtPais" id="txtPais">
+        <input type="button" value="Verificar" onclick="nacionalidade()">
+        <div class="res"></div>
+    </div>
+    <script>
+
+        function nacionalidade(){
+            var paisv = document.querySelector('input#txtPais');
+            var result = document.querySelector('.res');
+            var pais = (paisv.value);
+
+            result.innerHTML = `<p>Você mora em ${pais}!</p>`;
+
+            if (pais == 'Brasil'){
+                result.innerHTML += '<p>Você é brasileiro!</p>';
+            } else if (pais == 'brasil'){
+                result.innerHTML += '<p>Opa, Brasil é com "B" maiúscolo e você é brasileiro! </p>'
+            } else {
+                result.innerHTML += '<p>Você é estrangeiro!</p>';
+            }
+        }  
+          
+    </script>
+</body>
+</html>
