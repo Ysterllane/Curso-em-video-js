@@ -99,5 +99,12 @@ Retornam true or false (valor booleano)
 * .getElementById('') --> por Id
 * .getElementsByName('')[] --> por name
 * .getElementsByClassName('')[]; --> por class
-* .querySelector
-* .querySelectorAll
+* .querySelector --> pega o primeiro seletor
+* .querySelectorAll --> pega todos os seletores
+
+## Estrutura de condicionais:
+* if (simples)
+* if {} else {} (composta)
+* if {} else if {} else {} (aninhadas)
+* switch (multipla) -->img
+

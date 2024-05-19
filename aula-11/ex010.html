@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DETRAN</title>
-    
+    <style>
+        body, input{
+            background-color: aquamarine;
+            text-align: center;
+            font: normal 16px Arial;
+        }
+        .body__input__velo{
+           width: 80px;
+        }
+    </style>
 </head>
 <body>
     <h1>Sistema de Multas</h1>
-    Velcidade do automóvel: <input type="number" name="txtvelo" id="txtvelo"> Km/h
+    Velocidade do automóvel: <input class="body__input__velo" type="number" name="txtvelo" id="txtvelo"> Km/h
     <input type="button" value="Verificar" onclick="calcular()">
     <div class="resultado"></div>
     <script>
