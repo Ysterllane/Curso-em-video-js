@@ -108,3 +108,90 @@ Retornam true or false (valor booleano)
 * if {} else if {} else {} (aninhadas)
 * switch (multipla) -->img
 
+## Array / vetor
+
+São variáveis compostas que armazenam mais de um elemento, cada elemento tem um valor e um indice de identificação qe começa em zero. Exemplo:
+
+````
+let num = [5, 2, 8, 9, 3]
+````
+
+### add um elemento no vetor:
+
+Na posição 5, adicione o elemento 1
+
+````js
+num[5] = 1
+````
+
+Na ultima posição, adicione o elemento 6
+
+````js
+num.push(6)
+````
+
+Quantidade de posições:
+
+````js
+num.length
+````
+
+Exibir um elemento específico
+
+````js
+console.log(`O primeiro valor do vetor é ${num[0]}`)
+````
+
+Ordenar o vetor de forma crescente:
+
+````js
+num.sort()
+````
+
+For para vetores:
+
+````js
+for (let i in num) {
+    console.log(`Posição: ${i}, elemento: ${num[i]}`)
+}
+````
+
+Saber a posição de um elemento:
+
+````js
+let position = num.indexOf(3)
+
+if (position == -1){
+    console.log('O valor não foi encontrado :(')
+} else {
+    console.log(`O valor está na posição ${position}`)
+}
+````
+
+## Funções:
+
+* São ações executadas assim que são chamadas ou em decorrência de algum evento
+* Pode receber parâmetros e retornar um resultado
+
+````js
+function parOuImpar(n) {
+    if (n%2 == 0){
+        return `par`
+    } else {
+        return `impar`
+    }
+}
+
+let res = parOuImpar(11)
+
+console.log(res)
+````
+
+## Objetos
+
+Variavés compostas que guardam valores, variáves, funcões e métodos
+
+````js
+let amigo = {nome:'José', sexo:'mas', peso:85.4, engordar(p){}}
+````
+
